@@ -10,7 +10,7 @@ conn = _.database()
 conn.create_db_tabels()
 conn.create_admin_user(password="happy123")
 
-# Intit GUI
+# Intit GUI.
 ctk.set_appearance_mode("System")  # Modes: system (default), light, dark
 ctk.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
 

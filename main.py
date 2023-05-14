@@ -70,7 +70,7 @@ class App(ctk.CTk):
 
         # show selected frame
         if name == "home":
-            self.frm_home.grid(row=0, column=1, sticky="nsew")
+            self.frm_home.grid(row=0, column=1, sticky="nsew")   
         else:
             self.frm_home.grid_forget()
 

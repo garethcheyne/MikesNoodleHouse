@@ -27,11 +27,13 @@ class Product(Base):
     description = Column(String(255))
     costIncl = Column(Numeric)
 
+class Order(Base):
+    __tablename__ = 'orders'
+    id = Column(Integer, primary_key=True)
 
-# class Orders(Base):
-#     __tablename__ = 'orders'
-#     id = Column(Integer, primary_key=True)
-#     user = Column(Integer)
-#     customer = Column(Integer)
-#     item = Ma
-#     quantity = Column(Integer)
+class OrderItem(Base):
+    __tablename__ = 'order_item'
+    id = Column(Integer, primary_key=True)
+    order_id = Column(Integer, ForeignKey('orders.id'))
+    product_id = Column(Integer, ForeignKey('product.id'))
+    quantity = Column(Integer)
